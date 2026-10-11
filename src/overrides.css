@@ -1,0 +1,24 @@
+/* React port: layout and print tweaks only. Theme tokens live in styles.css. */
+.screen{display:block;}
+a.navitem{text-decoration:none;}
+button{font-family:inherit;}
+.btn:disabled{opacity:.5; cursor:not-allowed;}
+.img-slot{cursor:pointer; font-family:'Inter',sans-serif;}
+.filter-chip{font-family:'Inter',sans-serif;}
+.link-plain{cursor:pointer;}
+
+textarea{
+  width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:5px;
+  font-size:14px; font-family:'Inter',sans-serif; background:#fff; color:var(--ink); resize:vertical; min-height:80px;
+}
+textarea:focus{outline:none; border-color:#9BB0A2;}
+.comment-box{margin-top:14px;}
+.empty-note{font-size:13.5px; color:var(--ink-faint); padding:8px 0;}
+.finding-tabs{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px;}
+
+@media print{
+  body{background:#fff;}
+  .sidebar,.btn-row,.breadcrumb,.topline,.tab-row,.detail-header-card{display:none !important;}
+  .screen{padding:0; max-width:none;}
+  .report-doc{border:none;}
+}
